@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply bg-[#24BFA3] text-white px-7 py-3 rounded-lg font-semibold hover:bg-black hover:transition-colors;
+}
+
+.btn-secondary {
+    @apply text-[#4B556C] border-[#4B556C] border-2 px-3 sm:px-5 py-2 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#4B556C] transition-colors hover:text-white;
+}
+.btn-footer {
+    @apply text-white px-7 py-2 rounded-lg font-medium hover:bg-black hover:transition-colors bg-[#ED837F] font-Jakarta;
+}
