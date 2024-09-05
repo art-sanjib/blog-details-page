@@ -50,41 +50,21 @@
             <h3 class="font-Jakarta font-semibold mb-4 text-4xl">All Blogs</h3>
 
             <!-- sort section -->
-            <div class="relative" id="dropdownButton">
-                <div class="border border-2 flex justify-between" onclick="toggleDropdown()">Sort by Recently Uploaded
+            <div class="p-10">
 
-                    <img src="images/sort.png" class="w-5" alt="">
-
-
+                <div class="dropdown inline-block relative">
+                  <button class="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
+                    <span class="mr-1">Dropdown</span>
+                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+                  </button>
+                  <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+                    <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
+                    <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
+                    <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three is the magic number</a></li>
+                  </ul>
                 </div>
-                <div id="dropdown">
-                    <div class="rounded border-gray hidden">
-                        <button>First Item</button><br/>
-                        <button>Second Item</button><br/>
-                        <button>Third Item</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="relative" id="dropdownButton">
-                <div class="border-solid border-gray-300 border-[2px]px-5 py-2 rounded cursor-pointer font-semibold flex justify-between w-[200px] bg-white shadow-sm"
-                    onclick="toggleDropdown()">
-                    Sort by Recently Uploaded
-
-                    <img src="images/sort.png" class="w-5" alt="">
-
-                    
-                </div>
-                <div id="dropdown">
-                    <div class="rounded border-[1px] border-gray-300 bg-white w-[400px] shadow-md hidden">
-                        <div class="cursor-pointer hover:bg-gray-200">First Item</div>
-                        <div class="cursor-pointer p-4">Second Item</div>
-                        <div class="cursor-pointer">Third Item</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+              
+              </div>
             <!-- sort section -->
 
             <div class="relative text-gray-600">
@@ -1416,10 +1396,7 @@
     <script src="script.js" type="module"></script>
 
     <script>
-        function toggleDropdown() {
-            let dropdown = document.querySelector('#dropdownButton #dropdown');
-            dropdown.classList.toggle("hidden");
-        }
+        
     </script>
 </body>
 
