@@ -35,9 +35,9 @@
                     </li>
                     <li class="mb-4 sm:mb-0 sm:mr-6"><a href="allBlogs.html" class="font-semibold text-[#37415B]">All
                             Blogs</a></li>
-                    <button
+                    <a href=""
                         class="btn inline-block bg-[#24BFA3] text-white px-7 py-3 font-semibold hover:bg-black hover:transition-colors">Get
-                        started</button>
+                        started</a>
                 </ul>
             </nav>
         </div>
@@ -46,40 +46,52 @@
 
     <!-- Hero area start -->
     <section class="container mx-auto w-11/12 heroArea my-14 sm:my-12">
-        <div class="top-wrapper flex justify-between">
+        <div class="top-wrapper flex justify-between items-center">
             <h3 class="font-Jakarta font-semibold mb-4 text-4xl">All Blogs</h3>
 
-            <!-- sort section -->
-            <div class="p-10">
+            <div class="flex items-center">
+                <!-- sort section -->
+                <form class="w-[265px] mr-6">
+                    <fieldset>
+                        <div class="relative border-2 border-[#D3D3D3] flex py-[2px] rounded-full overflow-hidden">
+                            <div
+                                class="pointer-events-none left-0 top-0 bottom-0 flex items-center px-3 text-gray-700 border-l">
+                                <!-- <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg> -->
+                                <img src="images/sort.png" alt="">
+                            </div>
 
-                <div class="dropdown inline-block relative">
-                  <button class="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
-                    <span class="mr-1">Dropdown</span>
-                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
-                  </button>
-                  <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
-                    <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">One</a></li>
-                    <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Two</a></li>
-                    <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="#">Three is the magic number</a></li>
-                  </ul>
+                            <label for="frm-whatever" class="sr-only">My field</label>
+                            <select class="appearance-none w-full py-1 px-2 focus:outline-none" name="whatever" id="frm-whatever">
+                                <option value="">Sort by Recently Uploaded</option>
+                                <option value="1">Item 1</option>
+                                <option value="2">Item 2</option>
+                                <option value="3">Item 3</option>
+                            </select>
+
+                        </div>
+                    </fieldset>
+                </form>
+                <!-- sort section -->
+
+                <!-- search -->
+                <div class="relative text-gray-600">
+                    <input type="search" name="serch" placeholder="Search all Blogs"
+                        class="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none border border-2 border-[#D3D3D3] w-[300px]">
+                    <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+                        <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                            viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
+                            xml:space="preserve" width="512px" height="512px">
+                            <path
+                                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                        </svg>
+                    </button>
                 </div>
-              
-              </div>
-            <!-- sort section -->
-
-            <div class="relative text-gray-600">
-                <input type="search" name="serch" placeholder="Search all Blogs"
-                    class="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none border border-2 border-[#D3D3D3] w-[300px]">
-                <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
-                    <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
-                        viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
-                        xml:space="preserve" width="512px" height="512px">
-                        <path
-                            d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
-                    </svg>
-                </button>
+                <!-- search -->
             </div>
+
         </div>
 
         <!-- filter buttons -->
@@ -205,7 +217,7 @@
                             <div class="card-article sm:mr-8 bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail.png" alt="Article image">
+                                    <img src="images/Thumbnail.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -243,8 +255,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -255,7 +267,7 @@
                             <div class="card-article sm:mr-8 bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail2.png" alt="Article image">
+                                    <img src="images/Thumbnail2.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -293,8 +305,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -305,7 +317,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail3.png" alt="Article image">
+                                    <img src="images/Thumbnail3.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -343,8 +355,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -355,7 +367,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail4.png" alt="Article image">
+                                    <img src="images/Thumbnail4.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -393,8 +405,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -405,7 +417,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail5.png" alt="Article image">
+                                    <img src="images/Thumbnail5.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -443,8 +455,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -455,7 +467,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail6.png" alt="Article image">
+                                    <img src="images/Thumbnail6.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -493,8 +505,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -505,7 +517,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail7.png" alt="Article image">
+                                    <img src="images/Thumbnail7.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -543,8 +555,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -555,7 +567,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail8.png" alt="Article image">
+                                    <img src="images/Thumbnail8.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -593,8 +605,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -605,7 +617,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail9.png" alt="Article image">
+                                    <img src="images/Thumbnail9.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -643,8 +655,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -655,7 +667,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail10.png" alt="Article image">
+                                    <img src="images/Thumbnail10.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -693,8 +705,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -705,7 +717,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail11.png" alt="Article image">
+                                    <img src="images/Thumbnail11.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -743,8 +755,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -755,7 +767,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail12.png" alt="Article image">
+                                    <img src="images/Thumbnail12.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -793,8 +805,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -805,7 +817,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail13.png" alt="Article image">
+                                    <img src="images/Thumbnail13.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -843,8 +855,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -855,7 +867,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail14.png" alt="Article image">
+                                    <img src="images/Thumbnail14.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -893,8 +905,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -905,7 +917,7 @@
                             <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7 w-[430px]"
                                 x-show="openTab === 8 openTab === 1">
                                 <figure>
-                                    <img src="images/Thumbnail15.png" alt="Article image">
+                                    <img src="images/Thumbnail15.png" alt="Article image" class="w-full">
                                 </figure>
 
                                 <div class="full-bottom px-5 pb-1 sm:px-0">
@@ -943,8 +955,8 @@
 
                                         <div>
                                             <a href="#"
-                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white">Read
-                                                more</a>
+                                                class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                                More</a>
                                         </div>
                                     </div>
                                 </div>
@@ -958,11 +970,8 @@
                                 class="btn-secondary font-Jakarta text-[#797979] border border-[#D3D3D3] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#D3D3D3] transition-colors hover:text-[#797979]">Load
                                 More</a>
                         </div>
-
                     </div>
-
                 </section>
-
             </div>
         </div>
         <!-- filter buttons -->
@@ -1274,9 +1283,9 @@
                     <p class="text-[#3E3E3E] font-medium font-Jakarta my-6">Stream unlimited content on your<br />
                         phone, tablet,
                         laptop, and TV.</p>
-                    <button
+                    <a href="#"
                         class="btn inline-block bg-[#24BFA3] text-white px-7 py-3 rounded-lg font-semibold hover:bg-black hover:transition-colors">Get
-                        started</button>
+                        started</a>
                 </div>
                 <div class="right-content sm:w-1/3">
                     <figure>
@@ -1309,8 +1318,8 @@
                             class="rounded border-0 bg-white px-3 py-2 outline-none transition-all pl-9 md:w-2/4"
                             id="exampleFormControlInput1" placeholder="Your Email" />
                         <img src="images/mail.png" alt="" class="absolute top-2 left-2 w-6">
-                        <button
-                            class="text-white px-4 sm:px-7 py-2 rounded-lg font-medium hover:bg-black hover:transition-colors bg-[#24BFA3] sm:bg-[#ED837F] font-Jakarta">Submit</button>
+                        <a href="#"
+                            class="text-white px-4 sm:px-7 py-2 rounded-lg font-medium hover:bg-black hover:transition-colors bg-[#24BFA3] sm:bg-[#ED837F] font-Jakarta">Submit</a>
                     </div>
 
                 </div>
@@ -1396,7 +1405,7 @@
     <script src="script.js" type="module"></script>
 
     <script>
-        
+
     </script>
 </body>
 
