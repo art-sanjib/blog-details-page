@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Lykstage</title>
+</head>
+
+<body class="select-none">
+    <!-- Header area start -->
+    <header class="relative py-5">
+        <div class="container mx-auto w-11/12 flex justify-between items-center">
+            <a href="/index.html" class="flex items-center"><img src="images/Logo.png" alt="" class="w-28 sm:w-36"></a>
+            <nav class="">
+
+                <button class="text-end flex sm:hidden" id="mobile_icon">
+                    <div class="" id="mobile_icon">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                        </svg>
+
+                    </div>
+                </button>
+
+                <ul id="main_menu"
+                    class="absolute shadow-lg sm:shadow-none py-5 sm:p-0 bg-white w-full left-0 top-14 text-center hidden sm:block sm:relative sm:top-0 sm:flex items-center">
+                    <!-- <li class="mb-4 sm:mb-0 sm:mr-6"><a href="blog.html" class="font-semibold text-[#37415B]">Blog</a></li>
+              <li class="mb-4 sm:mb-0 sm:mr-6"><a href="allBlogs.html" class="font-semibold text-[#37415B]">All Blogs</a>
+              </li> -->
+
+                    <a href="#"
+                        class="btn inline-block bg-[#24BFA3] text-white px-7 py-3 font-semibold hover:bg-black hover:transition-colors">Get
+                        started</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header area end -->
+
+    <!-- Hero area start -->
+    <main>
+        <div class="container mx-auto w-11/12 heroArea mb-0 mt-8 sm:mt-10">
+            <div class="top-wrapper flex flex-col md:flex-row justify-between items-center">
+                <h3 class="font-Jakarta font-semibold mb-4 text-2xl md:text-3xl lg:text-4xl">All Blogs</h3>
+
+                <div class="flex flex-col md:flex-row items-center w-full md:w-auto">
+                    <!-- sort section -->
+                    <form class="w-full md:w-[265px] mb-4 md:mb-0 md:mr-6">
+                        <fieldset>
+                            <div
+                                class="relative border border-1 border-[#D3D3D3] flex py-[2px] rounded-full overflow-hidden">
+                                <div
+                                    class="pointer-events-none left-0 top-0 bottom-0 flex items-center px-3 text-gray-700 border-l">
+                                    <img src="images/sort.png" alt="">
+                                </div>
+                                <label for="frm-whatever" class="sr-only">My field</label>
+                                <select class="appearance-none w-full py-1 px-2 focus:outline-none text-[#797979]"
+                                    name="whatever" id="frm-whatever">
+                                    <option value="">Sort by Recently Uploaded</option>
+                                    <option value="1">Item 1</option>
+                                    <option value="2">Item 2</option>
+                                    <option value="3">Item 3</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <!-- sort section -->
+
+                    <!-- search -->
+                    <div class="relative text-gray-600 w-full md:w-auto">
+                        <input type="search" name="search" placeholder="Search all Blogs"
+                            class="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none border border-1 border-[#D3D3D3] w-full md:w-[300px]">
+                        <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+                            <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                                viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
+                                xml:space="preserve" width="512px" height="512px">
+                                <path
+                                    d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- search -->
+                </div>
+            </div>
+
+            <div x-data="{ 
+                openTab: 1,
+                activeClasses: 'bg-[#24BFA3] rounded-full text-white',
+                inactiveClasses: 'border border-1 rounded-full text-white bg-[#24BFA3]'
+            }" class="py-6">
+                <ul class="flex flex-wrap justify-start gap-3 mb-6">
+                    <li @click="openTab = 2" :class="{ '-mb-px': openTab === 2 }">
+                        <a href="#" :class="openTab === 2 ? activeClasses : inactiveClasses"
+                            class="inline-block py-1 px-4 font-semibold text-sm sm:text-base md:text-sm ">
+                            Medium
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <!-- filter buttons -->
+
+        <!-- filter buttons -->
+
+        <!-- all blogs start -->
+        <section class="container mx-auto w-11/12 mb-16">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- <div class="flex flex-wrap -mx-1 lg:-mx-4 justify-between">  -->
+
+                <!-- flex flex-wrap -mx-1 lg:-mx-4 justify-between -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+
+                    <!-- card-article sm:mr-8 bg-[#EDF2FB] sm:bg-white rounded-3xl w-[430px] -->
+                    <figure>
+                        <img src="images/Thumbnail.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail2.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail3.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail4.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail5.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail6.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail7.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail8.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail9.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail10.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail11.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail12.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail13.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail14.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- Column -->
+                <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl">
+                    <figure>
+                        <img src="images/Thumbnail15.png" alt="Article image" class="w-full">
+                    </figure>
+
+                    <div class="full-bottom px-5 pb-1 sm:px-0">
+                        <div class="categoryDetails my-5">
+                            <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog /
+                                Technology</span>
+                            <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci
+                            Burst - A Vintage
+                            Video Game Inspired WebGL Experience</h3>
+                        <p class="text-[#37415B] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur.
+                            At
+                            gravida sollicitudin
+                            aliquam lorem in eget tellus
+                            sodales
+                            malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit
+                            sed....</p>
+
+                        <div class="bottomArea flex items-center justify-between mb-6">
+                            <div class="client flex items-center mr-10">
+                                <div>
+
+                                    <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                                        <img src="images/Creator Avator.png" alt="">
+                                    </span>
+                                </div>
+
+                                <div class="details flex flex-col">
+                                    <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                                    <span class="date text-[#8B8B8B] font-Jakarta">Jun 8, 2021</span>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <a href="#"
+                                    class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Column -->
+
+                <!-- </div> -->
+
+            </div>
+            <div class="load-more-button grid place-items-center my-5">
+                <a href="#"
+                    class="btn-secondary font-Jakarta text-[#797979] border border-[#D3D3D3] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#D3D3D3] transition-colors hover:text-[#797979]">Load
+                    More</a>
+            </div>
+        </section>
+        <!-- all blogs end -->
+
+        <!-- blog area end -->
+
+        <!-- Watch everywhere start -->
+        <section class="watch-everywhere container mx-auto mt-10 lg:mt-24 py-24 bg-[#FBFBFB]">
+            <div class="wrapper sm:flex items-center justify-center w-11/12 mx-auto">
+                <div class="left-content sm:w-1/3 mb-9">
+                    <h3 class="text-[#3E3E3E] font-bold text-3xl font-Jakarta">Watch everywhere</h3>
+                    <p class="text-[#3E3E3E] font-medium font-Jakarta my-6">Stream unlimited content on your<br />
+                        phone, tablet,
+                        laptop, and TV.</p>
+                    <a href="#"
+                        class="btn inline-block bg-[#24BFA3] text-white px-7 py-3 rounded-lg font-semibold hover:bg-black hover:transition-colors">Get
+                        started</a>
+                </div>
+                <div class="right-content sm:w-1/3">
+                    <figure>
+                        <img src="images/Frame 81.png" alt="">
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Watch everywhere end -->
+
+    <!-- footer start -->
+
+    <footer class="bg-[#3e3e3e]">
+        <div class="mx-auto space-y-8 px-4 sm-px-0 py-14 sm:px-0 lg:space-y-16 sm:px-0 container mx-auto sm:w-11/12">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <div>
+                    <div class="text-teal-600">
+                        <a href="/index.html" class="flex items-center mb-5"><img src="images/Logo.png" alt=""></a>
+                        <h4 class="text-white font-Jakarta text-xl">Watch. Create. Earn.Repeat.</h4>
+                    </div>
+
+                    <p class="mt-4 text-white font-Jakarta mb-5 text-xl">
+                        Join our mailing list for the latest updates
+                    </p>
+
+                    <div class="relative mb-3" data-twe-input-wrapper-init>
+                        <input type="text"
+                            class="rounded border-0 bg-white px-3 py-2 outline-none transition-all pl-9 md:w-2/4"
+                            id="exampleFormControlInput1" placeholder="Your Email" />
+                        <img src="images/mail.png" alt="" class="absolute top-2 left-2 w-6">
+                        <button
+                            class="text-white px-4 sm:px-7 py-2 rounded-lg font-medium hover:bg-black hover:transition-colors bg-[#24BFA3] sm:bg-[#ED837F] font-Jakarta">Submit</button>
+                    </div>
+
+                </div>
+
+                <div
+                    class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3 sm:ml-52 sm:flex sm:justify-between">
+                    <div>
+                        <p class="font-medium text-white font-Jakarta font-medium sm:text-2xl">Useful Links</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-white transition hover:opacity-75 font-Jakarta">Login</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-white transition hover:opacity-75 font-Jakarta">Signup</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-white transition hover:opacity-75 font-Jakarta">Rewards</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-white transition hover:opacity-75 font-Jakarta">Discover</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-white transition hover:opacity-75 font-Jakarta">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="font-medium text-white font-Jakarta font-medium sm:text-2xl">More Links</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-white transition hover:opacity-75 font-Jakarta">Twitter</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-white transition hover:opacity-75 font-Jakarta">LinkedIn</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-white transition hover:opacity-75 font-Jakarta">Instagram</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-white transition hover:opacity-75 font-Jakarta">Company</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="font-medium text-white font-Jakarta font-medium sm:text-2xl">Legal</p>
+
+                        <ul class="mt-6 space-y-4 text-sm">
+                            <li>
+                                <a href="#" class="text-white transition hover:opacity-75 font-Jakarta">Terms of
+                                    Service</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-white transition hover:opacity-75 font-Jakarta">Privacy
+                                    Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-white text-xl">&copy; LYKSTAGE 2024</p>
+                <span class="text-white inline-block mt-3">LYKSTAGE copyright and intellectual property are owned by LYK
+                    Inc, a Delaware-based corporation.
+                </span>
+            </div>
+        </div>
+    </footer>
+    <!-- footer start end-->
+
+    <script src="//unpkg.com/alpinejs"></script>
+    <script src="script.js" type="module"></script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
