@@ -27,7 +27,7 @@
     <div class="container mx-auto w-11/12 flex justify-between items-center">
       <a href="/index.html" class="flex items-center"><img src="images/Logo.png" alt="" class="w-28 sm:w-36"></a>
 
-      <div class="relative text-gray-650">
+      <div class="relative text-gray-650 search-box">
         <input type="search" name="serch" placeholder="Search all Blogs"
           class="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none border border-1 border-[#D3D3D3] sm:w-[150px] md:w-[820px]">
         <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
@@ -56,9 +56,6 @@
 
         <ul id="main_menu"
           class="absolute shadow-lg sm:shadow-none py-5 sm:p-0 bg-white w-full left-0 top-14 text-center hidden sm:block sm:relative sm:top-0 sm:flex items-center">
-          <!-- <li class="mb-4 sm:mb-0 sm:mr-6"><a href="blog.html" class="font-semibold text-[#37415B]">Blog</a></li>
-          <li class="mb-4 sm:mb-0 sm:mr-6"><a href="allBlogs.html" class="font-semibold text-[#37415B]">All Blogs</a>
-          </li> -->
           <a href="#"
             class="btn inline-block bg-[#24BFA3] text-white px-7 py-3 font-semibold hover:bg-black hover:transition-colors">Get
             started</a>
@@ -66,8 +63,50 @@
       </nav>
     </div>
   </header>
+  
+  <!-- <header class="relative py-5">
+    <div class="container mx-auto w-11/12 flex justify-between items-center">
+      <a href="/index.html" class="flex items-center"><img src="images/Logo.png" alt="" class="w-28 sm:w-36"></a>
+  
+      <div class="relative text-gray-650 search-box w-full max-w-lg md:max-w-2xl lg:max-w-4xl">
+        <input type="search" name="search" placeholder="Search all Blogs"
+          class="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none border border-1 border-[#D3D3D3] w-full sm:w-[150px] md:w-[400px] lg:w-[600px] xl:w-[820px]">
+        <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+          <svg class="h-4 w-4 fill-[#797979] hover:fill-[#000]" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+            viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+            width="512px" height="512px">
+            <path
+              d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+          </svg>
+        </button>
+      </div>
+  
+      <nav class="">
+        <button class="text-end flex sm:hidden" id="mobile_icon">
+          <div id="mobile_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+            </svg>
+          </div>
+        </button>
+  
+        <ul id="main_menu"
+          class="absolute shadow-lg sm:shadow-none py-5 sm:p-0 bg-white w-full left-0 top-14 text-center hidden sm:block sm:relative sm:top-0 sm:flex items-center">
+          <a href="#"
+            class="btn inline-block bg-[#24BFA3] text-white px-7 py-3 font-semibold hover:bg-black hover:transition-colors">Get
+            started</a>
+        </ul>
+      </nav>
+    </div>
+  </header> -->
+  
+  
+
   <!-- Header area end -->
 
+  <main>
   <!-- Hero area start -->
   <section class="container mx-auto w-11/12 heroArea my-14 sm:my-10">
     <h3 class="font-Jakarta font-semibold mb-4 text-2xl">Featured Blog</h3>
@@ -113,9 +152,8 @@
   </section>
   <!-- Hero area end -->
 
-  <main>
     <!-- Latest article area start -->
-    <section class="container mx-auto w-11/12 my-16">
+    <!-- <section class="container mx-auto w-11/12 my-16">
       <div class="flex justify-between items-center mb-5">
         <h3 class="font-Jakarta font-semibold text-black mb-4 text-2xl">Recent Blogs</h3>
         <a href="#" class="text-[#9F9F9F] text-xl underline">View All Blogs</a>
@@ -145,7 +183,6 @@
             <div class="bottomArea flex justify-between items-center">
               <div class="client flex items-center mr-10">
                 <div>
-                  <!-- <span class="h-9 w-9 bg-[#D9D9D9] inline-block rounded-full mr-3"></span> -->
                   <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
                     <img src="images/Creator Avator.png" alt="">
                   </span>
@@ -186,7 +223,6 @@
             <div class="bottomArea flex justify-between items-center">
               <div class="client flex items-center mr-10">
                 <div>
-                  <!-- <span class="h-9 w-9 bg-[#D9D9D9] inline-block rounded-full mr-3"></span> -->
                   <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
                     <img src="images/Creator Avator.png" alt="">
                   </span>
@@ -228,7 +264,6 @@
             <div class="bottomArea flex justify-between items-center">
               <div class="client flex items-center mr-10">
                 <div>
-                  <!-- <span class="h-9 w-9 bg-[#D9D9D9] inline-block rounded-full mr-3"></span> -->
                   <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
                     <img src="images/Creator Avator.png" alt="">
                   </span>
@@ -248,9 +283,223 @@
             </div>
           </div>
         </div>
+        
+        <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7">
+          <figure>
+            <img src="images/RecentBlogs3.png" class="w-full" alt="Article image">
+          </figure>
+
+          <div class="full-bottom px-5 pb-7 sm:px-0">
+            <div class="categoryDetails my-5">
+              <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog / Technology</span>
+              <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci Burst - A Vintage
+              Video Game Inspired WebGL Experience</h3>
+            <p class="text-[#9F9F9F] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur. At gravida sollicitudin
+              aliquam lorem in eget tellus
+              sodales
+              malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit sed....</p>
+
+
+            <div class="bottomArea flex justify-between items-center">
+              <div class="client flex items-center mr-10">
+                <div>
+                  <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                    <img src="images/Creator Avator.png" alt="">
+                  </span>
+                </div>
+
+                <div class="details flex flex-col">
+                  <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                  <span class="date text-[#8B8B8B] font-Jakarta">Jun 27, 2021</span>
+                </div>
+
+              </div>
+              <div>
+                <a href="#"
+                  class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                  More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section> -->
+    
+    <section class="container mx-auto w-11/12 my-16">
+      <div class="flex justify-between items-center mb-5">
+        <h3 class="font-Jakarta font-semibold text-black mb-4 text-2xl">Recent Blogs</h3>
+        <a href="#" class="text-[#9F9F9F] text-xl underline">View All Blogs</a>
+      </div>
+    
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7">
+          <figure>
+            <img src="images/RecentBlogs.png" class="w-full" alt="Article image">
+          </figure>
+          <div class="px-5 pb-1">
+            <div class="categoryDetails my-5">
+              <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog / Technology</span>
+              <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci Burst - A Vintage
+              Video Game Inspired WebGL Experience</h3>
+            <p class="text-[#9F9F9F] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur. At gravida sollicitudin
+              aliquam lorem in eget tellus sodales malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar
+              velit sed....</p>
+            <div class="flex justify-between items-center">
+              <div class="client flex items-center mr-10">
+                <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                  <img src="images/Creator Avator.png" alt="">
+                </span>
+                <div class="flex flex-col">
+                  <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                  <span class="date text-[#8B8B8B] font-Jakarta">Jun 27, 2021</span>
+                </div>
+              </div>
+              <a href="#" class="btn-secondary text-[#318FD2] border border-[#318FD2] py-2 px-3 rounded-lg font-semibold hover:border-transparent hover:bg-[#318FD2] transition-colors hover:text-white">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Duplicate the card structure for additional cards -->
+        <!-- Each card will automatically fit into the responsive grid -->
+    
+        <div class="card-article sm:mr-10 bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7">
+          <figure>
+            <img src="images/RecentBlogs2.png" class="w-full" alt="Article image">
+          </figure>
+
+          <div class="full-bottom px-5 pb-1 sm:px-0">
+            <div class="categoryDetails my-5">
+              <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog / Technology</span>
+              <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci Burst - A Vintage
+              Video Game Inspired WebGL Experience</h3>
+            <p class="text-[#9F9F9F] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur. At gravida sollicitudin
+              aliquam lorem in eget tellus
+              sodales
+              malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit sed....</p>
+
+            <div class="bottomArea flex justify-between items-center">
+              <div class="client flex items-center mr-10">
+                <div>
+                  <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                    <img src="images/Creator Avator.png" alt="">
+                  </span>
+                </div>
+
+                <div class="details flex flex-col">
+                  <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                  <span class="date text-[#8B8B8B] font-Jakarta">Jun 27, 2021</span>
+                </div>
+
+              </div>
+              <div>
+                <a href="#"
+                  class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                  More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7">
+          <figure>
+            <img src="images/RecentBlogs3.png" class="w-full" alt="Article image">
+          </figure>
+
+          <div class="full-bottom px-5 pb-7 sm:px-0">
+            <div class="categoryDetails my-5">
+              <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog / Technology</span>
+              <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci Burst - A Vintage
+              Video Game Inspired WebGL Experience</h3>
+            <p class="text-[#9F9F9F] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur. At gravida sollicitudin
+              aliquam lorem in eget tellus
+              sodales
+              malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit sed....</p>
+
+
+            <div class="bottomArea flex justify-between items-center">
+              <div class="client flex items-center mr-10">
+                <div>
+                  <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                    <img src="images/Creator Avator.png" alt="">
+                  </span>
+                </div>
+
+                <div class="details flex flex-col">
+                  <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                  <span class="date text-[#8B8B8B] font-Jakarta">Jun 27, 2021</span>
+                </div>
+
+              </div>
+              <div>
+                <a href="#"
+                  class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                  More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-article bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7">
+          <figure>
+            <img src="images/RecentBlogs3.png" class="w-full" alt="Article image">
+          </figure>
+
+          <div class="full-bottom px-5 pb-7 sm:px-0">
+            <div class="categoryDetails my-5">
+              <span class="font-Jakarta text-[#24BFA3] font-medium mr-6">Blog / Technology</span>
+              <span class="text-[#37415B] font-Jakarta">6 MIN READ</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-[#37415B] font-Jakarta font-bold mt-3">Gucci Burst - A Vintage
+              Video Game Inspired WebGL Experience</h3>
+            <p class="text-[#9F9F9F] my-6 font-Jakarta">Lorem ipsum dolor sit amet consectetur. At gravida sollicitudin
+              aliquam lorem in eget tellus
+              sodales
+              malesuada. Dictum libero purus lobortis natoque. Quisque in ut pulvinar velit sed....</p>
+
+
+            <div class="bottomArea flex justify-between items-center">
+              <div class="client flex items-center mr-10">
+                <div>
+                  <span class="h-11 w-11 bg-[#D9D9D9] inline-block rounded-full mr-3">
+                    <img src="images/Creator Avator.png" alt="">
+                  </span>
+                </div>
+
+                <div class="details flex flex-col">
+                  <span class="text-[#525252] font-bold font-Jakarta">LYKSTAGE Team</span>
+                  <span class="date text-[#8B8B8B] font-Jakarta">Jun 27, 2021</span>
+                </div>
+
+              </div>
+              <div>
+                <a href="#"
+                  class="btn-secondary font-Jakarta text-[#318FD2] border border-[#318FD2] border-1 py-2 px-2 sm:px-3 rounded-lg font-semibold hover:border-[transparent] hover:bg-[#318FD2] transition-colors hover:text-white block">Read
+                  More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        
+    
+        <!-- More cards can be added here -->
       </div>
     </section>
+    
+    
     <!-- Latest article area end -->
+
+
 
     <!-- About area start -->
     <section class="container mx-auto w-11/12 my-16">
@@ -307,7 +556,7 @@
 
     <!-- blog area start -->
     <section class="previous-blog container mx-auto w-11/12 my-16">
-      <div class="wrapper sm:flex">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="card-article sm:mr-10 bg-[#EDF2FB] sm:bg-white rounded-3xl mb-7">
 
           <figure>
@@ -630,9 +879,6 @@
         </div>
       </div>
     </section>
-
-
-    
 
     <!-- PR Articles end -->
 
